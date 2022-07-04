@@ -4,7 +4,19 @@
   --light: #eee;
   --light-shadow: rgb(255, 99, 71);
 }
-
+html {
+  font-size: 18px;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.6;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h1 {
+  font-size: 2rem;
+}
 .logo,
 .fa-solid {
   font-size: 1.6rem;
@@ -13,18 +25,20 @@
 ul.show-links {
   height: 16rem;
 }
-
+a {
+  cursor: pointer;
+}
 .links {
-  height: 12rem;
+  height: 0;
   overflow: hidden;
   list-style: none;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 600px;
   background: var(--dark);
   justify-content: space-around;
   margin: 0;
-  padding: 0;
+  padding: 0 1.5rem;
 }
 .sidebar-links {
   list-style: none;
@@ -34,7 +48,7 @@ ul.show-links {
   text-decoration: none;
   font-size: 1.3rem;
   display: block;
-  padding: 10px 20px;
+  padding: 10px 10px;
 }
 .links a {
   color: var(--light);
@@ -95,7 +109,6 @@ body {
   margin: 0;
 }
 
-/* section idenfitiers # */
 main {
   padding: 50px 0;
 }
@@ -110,10 +123,15 @@ article {
 .sidebar {
   flex-direction: column;
   background: transparent;
-  height: auto;
-  max-height: 200px;
-  width: 150px;
+  width: 100%;
+  max-width: 340px;
   margin-right: 30px;
+}
+.sidebar a {
+  font-size: 0.9rem;
+}
+.sidebar h2 {
+  padding-left: 2rem;
 }
 .card {
   /* background: var(--primary); */
@@ -121,11 +139,8 @@ article {
   flex-direction: column;
 }
 article {
-  max-width: 70%;
+  width: 100%;
   height: 100vh;
-
-  /* display: flex;
-  align-items: flex-end; */
 }
 /* Add fixed nav for scroll */
 .fixed-navbar {
@@ -135,4 +150,17 @@ article {
   width: 100%;
   /* background: #fff; */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  padding: 3rem;
+}
+/* main {
+  padding: 3rem;
+} */
+
+@media (max-width: 860px) {
+  .sidebar {
+    display: none;
+  }
 }

@@ -57,7 +57,8 @@ scrollLinks.forEach((link) => {
 
     window.scrollTo({
       left: 0,
-      top: position,
+      top: position - 100,
+      behavior: "smooth",
     });
     // close
     linksContainer.style.height = 0;
