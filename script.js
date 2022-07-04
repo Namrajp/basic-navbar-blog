@@ -30,9 +30,9 @@ window.addEventListener("scroll", function () {
 // ********** smooth scroll ************
 // select links
 // const scrollLinks = document.querySelectorAll(".scroll-link");
-const scrollLinks = document.querySelectorAll(".links a");
+const scrollLinks = document.querySelectorAll(".sidebar-links a");
 navbar = document.getElementById("nav");
-const linksContainer = document.querySelector(".links");
+const linksContainer = document.querySelector(".sidebar-links");
 
 scrollLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
@@ -40,19 +40,20 @@ scrollLinks.forEach((link) => {
     e.preventDefault();
     // navigate to specific spot
     const id = e.currentTarget.getAttribute("href").slice(1);
+    console.log(id);
     const element = document.getElementById(id);
-
+    console.log(element);
     const navHeight = navbar.getBoundingClientRect().height;
-    const containerHeight = linksContainer.getBoundingClientRect().height;
+    // const containerHeight = linksContainer.getBoundingClientRect().height;
     const fixedNav = navbar.classList.contains("fixed-nav");
     let position = element.offsetTop - navHeight;
 
     if (!fixedNav) {
       position = position - navHeight;
     }
-    if (navHeight > 82) {
-      position = position + containerHeight;
-    }
+    // if (navHeight > 82) {
+    //   position = position + containerHeight;
+    // }
 
     window.scrollTo({
       left: 0,

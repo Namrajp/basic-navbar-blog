@@ -15,7 +15,7 @@ ul.show-links {
 }
 
 .links {
-  height: 0;
+  height: 12rem;
   overflow: hidden;
   list-style: none;
   display: flex;
@@ -26,14 +26,24 @@ ul.show-links {
   margin: 0;
   padding: 0;
 }
-.links a {
+.sidebar-links {
+  list-style: none;
+}
+.links a,
+.sidebar-links a {
   text-decoration: none;
   font-size: 1.3rem;
-  color: var(--light);
   display: block;
   padding: 10px 20px;
 }
-.links a:hover {
+.links a {
+  color: var(--light);
+}
+.sidebar-links a {
+  color: var(--dark);
+}
+.links a:hover,
+.sidebar-links a:hover {
   background: var(--light);
   color: var(--dark);
 }
@@ -86,48 +96,37 @@ body {
 }
 
 /* section idenfitiers # */
-section {
-  padding: 50px;
+main {
+  padding: 50px 0;
+}
+#home {
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */
-#compiled,
-#cli_vs_gui,
-#networking,
-#home {
+article {
+  color: #000;
   height: 100vh;
-  padding: 3rem;
-  border: 2px double maroon;
-  color: #222;
-}
-#home {
-  background-color: #aaa;
-  display: flex;
-}
-#cli_vs_gui {
-  background-color: #ccc;
-}
-#networking {
-  background-color: #bbb;
-}
-#compiled {
-  background-color: #aaa;
-  display: flex;
 }
 .sidebar {
   flex-direction: column;
   background: transparent;
   height: auto;
-  /* border: 1px solid white; */
   max-height: 200px;
   width: 150px;
-  margin-right: 2rem;
+  margin-right: 30px;
 }
 .card {
-  background: var(--light);
-  max-width: 70%;
-  padding: 2rem;
+  /* background: var(--primary); */
+  display: flex;
+  flex-direction: column;
 }
+article {
+  max-width: 70%;
+  height: 100vh;
 
+  /* display: flex;
+  align-items: flex-end; */
+}
 /* Add fixed nav for scroll */
 .fixed-navbar {
   position: fixed;
